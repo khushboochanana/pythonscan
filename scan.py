@@ -10,13 +10,13 @@ import pyttsx3
 from googletrans import Translator       
 
 def ocr_core(image):
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Users\khuchana\Documents\Softwares\tesseract.exe'
+    pytesseract.pytesseract.tesseract_cmd = r'HOMEPATH\tesseract.exe'
     """
     This function will handle the core OCR processing of images.
     """
     text = pytesseract.image_to_string(image)  # We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
     return text
-im = Image.open(r"C:\Users\khuchana\Documents\Projects\PythonScan\german.jpg")  
+im = Image.open(r"HOMEPATH\german.jpg")  
   
 
 result= ocr_core(im)
